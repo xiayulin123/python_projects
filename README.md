@@ -9,3 +9,12 @@ Once the python file is activate it will have <br/>
 <br/>
 Then user can enter the url into the box.<br/>
 Right now it only support Tencent video, Mango Video (chinese websites)<br/>
+
+
+
+<br/><br/><br/>
+test_pokemon
+<br/>
+This project is used to get the picture of all pokemons on pokemon official website
+<br/>
+![some text](1.png)
