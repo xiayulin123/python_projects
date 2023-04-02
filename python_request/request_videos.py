@@ -21,9 +21,16 @@ def show():
     if number == 1:
         link = "https://jiexi.pengdouw.com/jiexi1/?url=" + word
         html_data = requests.get(url=link).text
+        print(html_data)
+        # video_url = re.findall(
+        #     '<iframe id = "baiyug" scrolling="no" src="(.*?)"', html_data)
         video_url = re.findall(
-            '<iframe id = "baiyug" scrolling="no" src="(.*?)"', html_data)
-        webbrowser.open(video_url)
+            r'src="(.*?)"', html_data)
+        print(video_url)
+        if len(video_url) != 0:
+            webbrowser.open(video_url[0])
+        else:
+            print("Couldn't find video")
 
     elif number == 2:
         link = "https://jiexi.pengdouw.com/jiexi2/?url=" + word
